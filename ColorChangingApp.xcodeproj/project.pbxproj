@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		4AAF6430258C10CF00504EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF642F258C10CF00504EB0 /* AppDelegate.swift */; };
 		4AAF6432258C10CF00504EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF6431258C10CF00504EB0 /* SceneDelegate.swift */; };
-		4AAF6434258C10CF00504EB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF6433258C10CF00504EB0 /* ViewController.swift */; };
+		4AAF6434258C10CF00504EB0 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF6433258C10CF00504EB0 /* InitialViewController.swift */; };
 		4AAF6437258C10CF00504EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF6435258C10CF00504EB0 /* Main.storyboard */; };
 		4AAF6439258C10D300504EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF6438258C10D300504EB0 /* Assets.xcassets */; };
 		4AAF643C258C10D300504EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF643A258C10D300504EB0 /* LaunchScreen.storyboard */; };
+		4AAF6446258C118300504EB0 /* ColorChangingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF6445258C118300504EB0 /* ColorChangingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4AAF642C258C10CF00504EB0 /* ColorChangingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorChangingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF642F258C10CF00504EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF6431258C10CF00504EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4AAF6433258C10CF00504EB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AAF6433258C10CF00504EB0 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		4AAF6436258C10CF00504EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AAF6438258C10D300504EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAF643B258C10D300504EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AAF643D258C10D300504EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AAF6445258C118300504EB0 /* ColorChangingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				4AAF642F258C10CF00504EB0 /* AppDelegate.swift */,
 				4AAF6431258C10CF00504EB0 /* SceneDelegate.swift */,
-				4AAF6433258C10CF00504EB0 /* ViewController.swift */,
+				4AAF6433258C10CF00504EB0 /* InitialViewController.swift */,
+				4AAF6445258C118300504EB0 /* ColorChangingViewController.swift */,
 				4AAF6435258C10CF00504EB0 /* Main.storyboard */,
 				4AAF6438258C10D300504EB0 /* Assets.xcassets */,
 				4AAF643A258C10D300504EB0 /* LaunchScreen.storyboard */,
@@ -137,9 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AAF6434258C10CF00504EB0 /* ViewController.swift in Sources */,
+				4AAF6434258C10CF00504EB0 /* InitialViewController.swift in Sources */,
 				4AAF6430258C10CF00504EB0 /* AppDelegate.swift in Sources */,
 				4AAF6432258C10CF00504EB0 /* SceneDelegate.swift in Sources */,
+				4AAF6446258C118300504EB0 /* ColorChangingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HV5PMLH7Y7;
 				INFOPLIST_FILE = ColorChangingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ColorChangingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HV5PMLH7Y7;
 				INFOPLIST_FILE = ColorChangingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ColorChangingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

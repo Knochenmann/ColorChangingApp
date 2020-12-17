@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ColorChangingViewController.swift
 //  ColorChangingApp
 //
 //  Created by Егор Костюхин on 18.12.2020.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ColorChangingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
-
 }
-
