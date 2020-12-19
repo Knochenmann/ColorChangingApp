@@ -113,6 +113,9 @@
                                 <rect key="frame" x="123.5" y="471" width="128" height="46"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="Colorize it!"/>
+                                <connections>
+                                    <action selector="colorizeAction:" destination="2mc-Y1-piE" eventType="touchUpInside" id="4wL-h0-Mkb"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RXE-rC-Icu" userLabel="Red Stack">
                                 <rect key="frame" x="16" y="347" width="343" height="34"/>

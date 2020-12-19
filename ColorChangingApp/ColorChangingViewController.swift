@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ColorChangingViewControllerDelegate: AnyObject {
+    func changeColor()
+}
+
 class ColorChangingViewController: UIViewController {
     @IBOutlet var colorView: UIView!
     
@@ -24,6 +28,8 @@ class ColorChangingViewController: UIViewController {
     @IBOutlet var blueTextField: UITextField!
     
     @IBOutlet var actionButton: UIButton!
+    
+    weak var delegate: ColorChangingViewControllerDelegate?
     
     override func viewWillLayoutSubviews() {
         colorView.layer.cornerRadius = 10
@@ -46,13 +52,7 @@ class ColorChangingViewController: UIViewController {
             alpha: 1
         )
     }
-//    private func changeColorManually () {
-//        colorView.layer.backgroundColor = CGColor(
-//            red: CGFloat(redTextField.text)/255,
-//            green: CGFloat(greenTextField.text)/255,
-//            blue: CGFloat(blueTextField.text)/255,
-//            alpha: 1
-//    }
+
     
     private func showColorAmount(in view: UILabel, from slider: UISlider) {
         view.text = "\(Int(slider.value))"
@@ -73,5 +73,11 @@ class ColorChangingViewController: UIViewController {
     @IBAction func changeBlueColorAmount(_ sender: Any) {
         changeColor()
         showColorAmount(in: blueColorAmount, from: blueSliderView)
+    }
+    
+    
+    @IBAction func colorizeAction(_ sender: Any) {
+        delegate?.changeColor()
+        navigationController?.popViewController(animated: true)
     }
 }
