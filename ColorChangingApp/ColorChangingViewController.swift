@@ -11,7 +11,8 @@ protocol ColorChangingViewControllerDelegate: AnyObject {
     func changeColor(red: Float, green: Float, blue: Float)
 }
 
-class ColorChangingViewController: UIViewController {
+
+class ColorChangingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var colorView: UIView!
     
     var red: Float!
@@ -32,6 +33,7 @@ class ColorChangingViewController: UIViewController {
     
     @IBOutlet var actionButton: UIButton!
     
+    
     weak var delegate: ColorChangingViewControllerDelegate?
     
     override func viewWillLayoutSubviews() {
@@ -39,16 +41,25 @@ class ColorChangingViewController: UIViewController {
         
         redSliderView.tintColor = .red
         redSliderView.setValue(red, animated: true)
+        
+        redTextField.returnKeyType = .done
+        redTextField.delegate = self
         redTextField.text = String(Int(red))
         redColorAmount.text = String(Int(red))
         
         greenSliderView.tintColor = .green
         greenSliderView.setValue(green, animated: true)
+        
+        greenTextField.returnKeyType = .done
+        greenTextField.delegate = self
         greenTextField.text = String(Int(green))
         greenColorAmount.text = String(Int(green))
         
         blueSliderView.tintColor = .blue
         blueSliderView.setValue(blue, animated: true)
+        
+        blueTextField.returnKeyType = .done
+        blueTextField.delegate = self
         blueTextField.text = String(Int(blue))
         blueColorAmount.text = String(Int(blue))
     }
@@ -63,6 +74,11 @@ class ColorChangingViewController: UIViewController {
             alpha: 1
         )
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     private func changeColor(red: Float, green: Float, blue: Float) {
