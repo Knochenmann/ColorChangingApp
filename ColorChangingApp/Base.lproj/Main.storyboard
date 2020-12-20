@@ -16,8 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="center" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcp-Nc-yxg">
+                                <rect key="frame" x="49" y="195" width="277" height="277"/>
+                                <color key="backgroundColor" red="0.27915567159999999" green="0.24679255489999999" blue="0.25480118390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="nN9-Ke-sav"/>
+                                    <constraint firstAttribute="height" constant="277" id="slz-Qi-2Cl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fcp-Nc-yxg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O5E-fq-p6J"/>
+                            <constraint firstItem="fcp-Nc-yxg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mrN-Ce-PoL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tintness?" largeTitleDisplayMode="always" id="mSj-el-SvI">
                         <barButtonItem key="rightBarButtonItem" title="Color it!" image="paintbrush" catalog="system" style="done" id="42x-fd-r84">
@@ -26,6 +41,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pictureView" destination="fcp-Nc-yxg" id="Ksb-uf-UTT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,6 +231,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="450" height="312.5"/>
         <image name="paintbrush" catalog="system" width="122" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

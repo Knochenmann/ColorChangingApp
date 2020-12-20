@@ -8,16 +8,19 @@
 import UIKit
 
 protocol ColorChangingViewControllerDelegate: AnyObject {
-    func changeColor()
+    func changeColor(red: Float, green: Float, blue: Float)
 }
 
 class ColorChangingViewController: UIViewController {
     @IBOutlet var colorView: UIView!
     
+    var red: Float!
+    var green: Float!
+    var blue: Float!
+    
     @IBOutlet var redColorAmount: UILabel!
     @IBOutlet var greenColorAmount: UILabel!
     @IBOutlet var blueColorAmount: UILabel!
-    
     
     @IBOutlet var redSliderView: UISlider!
     @IBOutlet var greenSliderView: UISlider!
@@ -35,49 +38,77 @@ class ColorChangingViewController: UIViewController {
         colorView.layer.cornerRadius = 10
         
         redSliderView.tintColor = .red
-        greenSliderView.tintColor = .green
-        blueSliderView.tintColor = .blue
+        redSliderView.setValue(red, animated: true)
+        redTextField.text = String(Int(red))
+        redColorAmount.text = String(Int(red))
         
+        greenSliderView.tintColor = .green
+        greenSliderView.setValue(green, animated: true)
+        greenTextField.text = String(Int(green))
+        greenColorAmount.text = String(Int(green))
+        
+        blueSliderView.tintColor = .blue
+        blueSliderView.setValue(blue, animated: true)
+        blueTextField.text = String(Int(blue))
+        blueColorAmount.text = String(Int(blue))
     }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
+        colorView.backgroundColor = UIColor(
+            red: CGFloat(red)/255,
+            green: CGFloat(green)/255,
+            blue: CGFloat(blue)/255,
+            alpha: 1
+        )
+        
     }
     
-    private func changeColor() {
+    private func changeColor(red: Float, green: Float, blue: Float) {
         colorView.layer.backgroundColor = CGColor(
-            red: CGFloat(redSliderView.value)/255,
-            green: CGFloat(greenSliderView.value)/255,
-            blue: CGFloat(blueSliderView.value)/255,
+            red: CGFloat(red)/255,
+            green: CGFloat(green)/255,
+            blue: CGFloat(blue)/255,
             alpha: 1
         )
     }
 
     
-    private func showColorAmount(in view: UILabel, from slider: UISlider) {
-        view.text = "\(Int(slider.value))"
+    private func showColorAmount(forColor color: Float,
+                                 inView view: UILabel,
+                                 inTextField textField: UITextField) {
+        view.text = String(Int(color))
+        textField.text = String(Int(color))
     }
+    
 
     @IBAction func changeRedColorAmount(_ sender: Any) {
-        changeColor()
-        showColorAmount(in: redColorAmount, from: redSliderView)
+        red = redSliderView.value
+        changeColor(red: red, green: green, blue: blue)
+        showColorAmount(forColor: red, inView: redColorAmount, inTextField: redTextField)
     }
     
     
     @IBAction func changeGreenColorAmount(_ sender: Any) {
-        changeColor()
-        showColorAmount(in: greenColorAmount, from: greenSliderView)
+        green = greenSliderView.value
+        changeColor(red: red, green: green, blue: blue)
+        showColorAmount(forColor: green, inView: greenColorAmount, inTextField: greenTextField)
     }
     
     
     @IBAction func changeBlueColorAmount(_ sender: Any) {
-        changeColor()
-        showColorAmount(in: blueColorAmount, from: blueSliderView)
+        blue = blueSliderView.value
+        changeColor(red: red, green: green, blue: blue)
+        showColorAmount(forColor: blue, inView: blueColorAmount, inTextField: blueTextField)
     }
     
     
     @IBAction func colorizeAction(_ sender: Any) {
-        delegate?.changeColor()
+        delegate?.changeColor(red: red,
+                              green: green,
+                              blue: blue)
+        
         navigationController?.popViewController(animated: true)
     }
 }
