@@ -32,10 +32,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tintness?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGL-ES-pZ7">
+                                <rect key="frame" x="129" y="586" width="117" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fGL-ES-pZ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0KK-jU-Ufx"/>
+                            <constraint firstItem="fGL-ES-pZ7" firstAttribute="top" secondItem="mvO-3F-7Gz" secondAttribute="bottom" constant="10" id="4mG-Co-ErS"/>
                             <constraint firstItem="fcp-Nc-yxg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O5E-fq-p6J"/>
                             <constraint firstItem="fcp-Nc-yxg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mrN-Ce-PoL"/>
                             <constraint firstItem="mvO-3F-7Gz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qVH-7O-WPr"/>
@@ -215,6 +223,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJf-f4-Cau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.8" y="60.719640179910051"/>
+        </scene>
+        <!--New View Controller-->
+        <scene sceneID="Oor-9u-32r">
+            <objects>
+                <viewController id="t2w-H9-uNs" customClass="NewViewController" customModule="ColorChangingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="glu-zB-lvq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1PE-ku-njQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFb-RQ-ho9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2631" y="61"/>
         </scene>
         <!--tint-->
         <scene sceneID="WET-TD-bdt">
