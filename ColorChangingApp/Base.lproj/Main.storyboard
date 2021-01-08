@@ -210,6 +210,7 @@
                         <outlet property="redColorAmount" destination="fEH-dW-Cst" id="N9p-ip-Okd"/>
                         <outlet property="redSliderView" destination="cZ1-Fl-0Y2" id="fjS-f0-blx"/>
                         <outlet property="redTextField" destination="cg7-Kb-Tki" id="ZL3-la-Lp6"/>
+                        <segue destination="t2w-H9-uNs" kind="show" identifier="toNewVC" id="b5y-1X-CyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJf-f4-Cau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,6 +227,7 @@
                         <viewLayoutGuide key="safeArea" id="1PE-ku-njQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Mmk-q2-bRr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFb-RQ-ho9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
