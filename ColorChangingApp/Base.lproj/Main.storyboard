@@ -224,14 +224,24 @@
                     <view key="view" contentMode="scaleToFill" id="glu-zB-lvq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbU-Dc-uud">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1PE-ku-njQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IbU-Dc-uud" firstAttribute="centerY" secondItem="glu-zB-lvq" secondAttribute="centerY" id="cue-CQ-SfJ"/>
+                            <constraint firstItem="IbU-Dc-uud" firstAttribute="centerX" secondItem="glu-zB-lvq" secondAttribute="centerX" id="owG-vb-G0a"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mmk-q2-bRr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFb-RQ-ho9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2631" y="61"/>
+            <point key="canvasLocation" x="2679" y="61"/>
         </scene>
         <!--tint-->
         <scene sceneID="WET-TD-bdt">
