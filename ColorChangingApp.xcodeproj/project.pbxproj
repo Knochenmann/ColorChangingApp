@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3D9EA925A917EE00BDB33E /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D9EA825A917EE00BDB33E /* NewViewController.swift */; };
 		4AAF6430258C10CF00504EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF642F258C10CF00504EB0 /* AppDelegate.swift */; };
 		4AAF6432258C10CF00504EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF6431258C10CF00504EB0 /* SceneDelegate.swift */; };
 		4AAF6434258C10CF00504EB0 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF6433258C10CF00504EB0 /* InitialViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A3D9EA825A917EE00BDB33E /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		4AAF642C258C10CF00504EB0 /* ColorChangingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorChangingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF642F258C10CF00504EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF6431258C10CF00504EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				4AAF6431258C10CF00504EB0 /* SceneDelegate.swift */,
 				4AAF6433258C10CF00504EB0 /* InitialViewController.swift */,
 				4AAF6445258C118300504EB0 /* ColorChangingViewController.swift */,
+				4A3D9EA825A917EE00BDB33E /* NewViewController.swift */,
 				4AAF6435258C10CF00504EB0 /* Main.storyboard */,
 				4AAF6438258C10D300504EB0 /* Assets.xcassets */,
 				4AAF643A258C10D300504EB0 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				4AAF6434258C10CF00504EB0 /* InitialViewController.swift in Sources */,
 				4AAF6430258C10CF00504EB0 /* AppDelegate.swift in Sources */,
+				4A3D9EA925A917EE00BDB33E /* NewViewController.swift in Sources */,
 				4AAF6432258C10CF00504EB0 /* SceneDelegate.swift in Sources */,
 				4AAF6446258C118300504EB0 /* ColorChangingViewController.swift in Sources */,
 			);
